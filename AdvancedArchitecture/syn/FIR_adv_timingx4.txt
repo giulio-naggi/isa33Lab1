@@ -1,0 +1,96 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'FIR' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : FIR
+Version: O-2018.06-SP4
+Date   : Thu Nov 19 13:45:40 2020
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: b9[1] (input port clocked by CLK)
+  Endpoint: dout_reg_3/OUT_DATA_reg[8]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FIR                5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.50       0.50 r
+  b9[1] (in)                                              0.00       0.50 r
+  MUL_p_i_0_10/A[1] (multiplier_24)                       0.00       0.50 r
+  MUL_p_i_0_10/mult_13/a[1] (multiplier_24_DW_mult_tc_0)
+                                                          0.00       0.50 r
+  MUL_p_i_0_10/mult_13/U233/Z (BUF_X1)                    0.09       0.59 r
+  MUL_p_i_0_10/mult_13/U353/Z (XOR2_X1)                   0.10       0.69 r
+  MUL_p_i_0_10/mult_13/U219/ZN (INV_X1)                   0.06       0.75 f
+  MUL_p_i_0_10/mult_13/U348/ZN (NAND2_X1)                 0.09       0.84 r
+  MUL_p_i_0_10/mult_13/U273/ZN (OAI22_X1)                 0.05       0.89 f
+  MUL_p_i_0_10/mult_13/U50/S (HA_X1)                      0.08       0.97 f
+  MUL_p_i_0_10/mult_13/U345/ZN (AOI222_X1)                0.11       1.08 r
+  MUL_p_i_0_10/mult_13/U223/ZN (INV_X1)                   0.03       1.11 f
+  MUL_p_i_0_10/mult_13/U344/ZN (AOI222_X1)                0.09       1.20 r
+  MUL_p_i_0_10/mult_13/U222/ZN (INV_X1)                   0.03       1.23 f
+  MUL_p_i_0_10/mult_13/U343/ZN (AOI222_X1)                0.09       1.32 r
+  MUL_p_i_0_10/mult_13/U216/ZN (INV_X1)                   0.03       1.35 f
+  MUL_p_i_0_10/mult_13/U342/ZN (AOI222_X1)                0.09       1.44 r
+  MUL_p_i_0_10/mult_13/U215/ZN (INV_X1)                   0.03       1.47 f
+  MUL_p_i_0_10/mult_13/U341/ZN (AOI222_X1)                0.09       1.56 r
+  MUL_p_i_0_10/mult_13/U221/ZN (INV_X1)                   0.03       1.59 f
+  MUL_p_i_0_10/mult_13/U10/CO (FA_X1)                     0.09       1.68 f
+  MUL_p_i_0_10/mult_13/U9/CO (FA_X1)                      0.09       1.77 f
+  MUL_p_i_0_10/mult_13/U8/CO (FA_X1)                      0.09       1.86 f
+  MUL_p_i_0_10/mult_13/U7/CO (FA_X1)                      0.09       1.95 f
+  MUL_p_i_0_10/mult_13/U6/CO (FA_X1)                      0.09       2.04 f
+  MUL_p_i_0_10/mult_13/U5/CO (FA_X1)                      0.09       2.13 f
+  MUL_p_i_0_10/mult_13/U4/CO (FA_X1)                      0.09       2.22 f
+  MUL_p_i_0_10/mult_13/U3/CO (FA_X1)                      0.09       2.31 f
+  MUL_p_i_0_10/mult_13/U242/Z (XOR2_X1)                   0.07       2.38 f
+  MUL_p_i_0_10/mult_13/U241/Z (XOR2_X1)                   0.08       2.46 f
+  MUL_p_i_0_10/mult_13/product[16] (multiplier_24_DW_mult_tc_0)
+                                                          0.00       2.46 f
+  MUL_p_i_0_10/M[8] (multiplier_24)                       0.00       2.46 f
+  ADD_p_i_1_20/B[8] (adder_12)                            0.00       2.46 f
+  ADD_p_i_1_20/add_12/B[8] (adder_12_DW01_add_0)          0.00       2.46 f
+  ADD_p_i_1_20/add_12/U1_8/S (FA_X1)                      0.15       2.61 r
+  ADD_p_i_1_20/add_12/SUM[8] (adder_12_DW01_add_0)        0.00       2.61 r
+  ADD_p_i_1_20/S[8] (adder_12)                            0.00       2.61 r
+  ADD_p_i_2_21/A[8] (adder_1)                             0.00       2.61 r
+  ADD_p_i_2_21/add_12/A[8] (adder_1_DW01_add_0)           0.00       2.61 r
+  ADD_p_i_2_21/add_12/U1_8/S (FA_X1)                      0.11       2.72 f
+  ADD_p_i_2_21/add_12/SUM[8] (adder_1_DW01_add_0)         0.00       2.72 f
+  ADD_p_i_2_21/S[8] (adder_1)                             0.00       2.72 f
+  dout_reg_3/IN_DATA[8] (REG_1)                           0.00       2.72 f
+  dout_reg_3/U17/ZN (NAND2_X1)                            0.03       2.75 r
+  dout_reg_3/U16/ZN (OAI21_X1)                            0.03       2.78 f
+  dout_reg_3/OUT_DATA_reg[8]/D (DFFR_X1)                  0.01       2.79 f
+  data arrival time                                                  2.79
+
+  clock CLK (rise edge)                                   9.20       9.20
+  clock network delay (ideal)                             0.00       9.20
+  clock uncertainty                                      -0.07       9.13
+  dout_reg_3/OUT_DATA_reg[8]/CK (DFFR_X1)                 0.00       9.13 r
+  library setup time                                     -0.05       9.08
+  data required time                                                 9.08
+  --------------------------------------------------------------------------
+  data required time                                                 9.08
+  data arrival time                                                 -2.79
+  --------------------------------------------------------------------------
+  slack (MET)                                                        6.29
+
+
+1
